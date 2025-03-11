@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(cors());
 
 // routes
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.use("/api/v1", todoRoutes);
 
 (async () => {
