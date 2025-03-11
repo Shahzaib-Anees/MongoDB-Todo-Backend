@@ -17,7 +17,7 @@ app.use("/api/v1", todoRoutes);
 
 (async () => {
   try {
-    const res = await connectDB(process.env.MONGO_URI);
+    const res = await connectDB();
     console.log(res);
     app.listen(process.env.PORT, () => {
       console.log(`Server is running on port ${process.env.PORT}`);
